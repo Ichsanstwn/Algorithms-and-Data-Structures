@@ -1,0 +1,14 @@
+Bagian yang pertama kali dilakukan adalah:
+1. Mencari posisi tengah: dengan membagi panjang list sama rata (kiri dan kanan)
+2. Membandingkan nilai di posisi tengah dengan nilai yang dicari
+3. Jika lebih kecil, maka nilai yang dicari berada di sebelah kiri nilai di posisi tengah
+4. Jika lebih besar, maka nilai yang dicari berada di sebelah kanan nilai di posisi tengah
+5. Cari posisi tengah pada bagian (kiri atau kanan) yang baru, untuk mencari posisi tengah yang baru: menggunakan batas awal dan akhir dari bagian yang baru,
+(i) Jika di kiri, posisi awal adalah posisi pertama pada list dan posisi terakhir adalah posisi tengah - 1. Kemudian, kedua posisi tersebut ditambahkan dan dibagi 2
+(ii) Jika di kanan, posisi awal adalah posisi tengah + 1 dan posisi terakhir adalah posisi terakhir pada list. Kemudian, kedua posisi tersebu ditambahkan dan dibagi 2
+Proses ini akan terus diulangi serta posisi awal dan akhir akan terus berubah atau menyempit sampai nilai yang dicari berhasil ditemukan
+
+Cara agar posisi awal dan akhir bisa terus berubah atau menyempit seperti apa?
+(i) Jika nilai yang dicari lebih kecil dari nilai di posisi tengah, hanya batas akhir yang perlu diubah. Batas awal akan selalu nilai di posisi pertama
+(ii) Jika nilai yang dicari lebih besar dari nilai di posisi tengah, hanya batas awal yang perlu diubah. Batas akhir akan selalu nilai di posisi terakhir
+Tapi bukankah mid tetap harus diubah? Masak mid-nya statis? Kalo ga diubah secar langsung terus gimana ngubahnya?

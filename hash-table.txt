@@ -1,0 +1,23 @@
+Hash table
+Analogi meja arsip, memiliki atribut:
+1. Ada data atau dokumen yang akan disimpan
+2. Ada meja arsip sebagai tempat penyimpanan
+
+Data yang disimpan memiliki atribut:
+1. Key atau bisa dikatakn sebagai judul dokumen atau data
+2. Value: Isi dari dokumen atau data tersebut
+
+Meja arsip memiliki atribut:
+1. Meja
+2. Laci meja
+3. Fungsi hash
+
+Saat kita membuat meja arsip baru, kita akan mengirimkan sebuah argumen berupa angka, yang mana angka ini akan diterjemahkan oleh metode inisialisasi sebagai jumlah laci di dalam meja arsip tersebut
+Nah, bagaimana menerjemahkan angka itu agar komputer paham "Oh, angka ini adalah jumlah laci yang diinginkan"?
+
+Pada metode inisialisasi ini kan kita menginisialisasi setiap atribut yang ada saat kita membuat sebuah meja arsip, salah satunya adalah laci kosong, tempat menyimpan data atau dokumen.
+Berarti saat membuat meja arsip yang baru tersebut, kita juga sudah harus membuat jumlah laci yang sesuai dengan yang kita kirimkan sebagai argumen? Jadi, kita tidak serta-merta hanya menginisialisasi laci kosong saja, tapi juga sudah harus disesuaikan nanti dengan angka atau argumen yang dikirimkan
+
+Fungsi hash -> mentransformasikan "judul dokumen" menjadi "nomor laci" (bisa dibilang seperti mengkategorikan dokumen ke laci yang sesuai)
+
+for terus berulang mencetak list sesuai dengan range dari jumlah list yang diinginkan, berarti harus ada sesuatu yang menangkap apa yang dicetak oleh for agar tidak hilang

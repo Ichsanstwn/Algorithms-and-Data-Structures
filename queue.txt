@@ -1,0 +1,15 @@
+# Implementasi queue via linked list:
+1. Membuat class Item: digunakan untuk membuat item baru
+2. di dalam class Item: kita harus menginisialisasi item (elemen yang akan disimpan), data diinisialisasi sebagai inputan dari user dan next_item, diinisialisasi dengan None (dianggap masih kosong atau belum ada antrian di belakangnya), digunakan untuk menunjuk item selanjutnya (di belakangnya)
+3. Membuat class Queue: digunakan untuk menyimpan (antrian) data
+4. di dalam class Queue: kita harus menginisialisasi front atau item atau antrian pertama dan dianggap masih kosong dan rear atau antrian paling belakang (ini yang membedakan antara linked list biasa dengan queue), digunakan agar proses penambahan item baru jadi lebih cepat karena kita tidak perlu menelusuri item satu per satu dari depan hanya untuk mengetahui sambungan dari masing-masing item sampai ke item terakhir, sebelum menambahkan item baru tersebut
+5. 
+
+Berarti kita harus menginisialisasi front dan rear sebagai None karena dianggap masih kosong (atau belum ada antrian)?
+Setelah itu kita membuat metode baru, yaitu enqueue yang digunakan untuk menambahkan item baru.
+Saat membuat item baru, kita cek dulu apakah front sudah terisi atau belum, kalau belum, maka item baru tersebut akan mengisi posisi front atau antrian pertama
+Tapi, jika front sudah terisi?
+
+Kita hanya bisa menghapus elemen dari depan, kemudian ketika elemen yang paling depan dihapus, maka elemen di belakangnya akan ditunjuk menjadi elemen terdepan (menggantikan elemen pertama yang dihapus), otomatis sekarang elemen tersebut menjadi elemen pertama
+Ketika di dalam list hanya tersisa satu elemen saja (bisa dibilang elemen itu adalah elemen paling depan dan paling belakang dari list tersebut). Jadi, ketika elemen itu dihapus, maka yang awalnya dia akan otomatis menunjuk ke elemen belakang, sekarang tidak bisa karena dialah satu-satunya elemen tersisa.
+Berarti apa yang terjadi setelah itu? Elemen terakhir itu akan menunjuk kemana? Apakah artinya elemen terakhir itu tidak akan menunjuk kemana-mana dan mengembalikan nilai None?

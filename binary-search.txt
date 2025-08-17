@@ -1,0 +1,30 @@
+Binary search:
+1. Data di dalam list harus terurut
+2. Cari posisi tengah dalam list tersebut
+3. Bandingkan nilai di posisi tengah dengan nilai yang dicari
+4. Apabila lebih kecil, berarti posisi nilai yang dicari ada di dalam rentang data di sebelah kiri dari posisi tengah
+5. Apabila lebih besar, berarti posisi nilai yang dicari ada di dalam rentang data di sebelah kanan dari posisi tengah
+6. Kemudian, ulangi proses no. 2 - 5, hingga nilai yang dicari berhasil ditemukan
+
+e.g.,
+list = [1,2,3,4,5]
+Sekilas kita tahu nilai 3 adalah nilai yang berada di posisi tengah, lalu bagaimana menerjemahkannya agar komputer juga tahu bahwa nilai 3 adalah nilai yang berada di posisi tengah?
+Bagaimana menjelaskan ke komputer cara menemukan posisi tengah di dalam suatu list?
+Jawab:
+Posisi tengah diketahui dengan cara:
+1. Ketahui jumlah data di dalam list
+2. Posisi tengah berarti posisi yang membagi jumlah data di sebelah kiri dan kanan dari posisi tengah dengan sama rata
+3. Ingat kita mencari posisi tengah
+4. Setelah posisi tengah ditemukan, kita bandingkan nilainya dengan nilai yang dicari
+5. Kita lakukan perulangan selama nilai yang dicari bukan nilai di posisi tengah
+6. Jika nilai yang dicari lebih kecil dari nilai di posisi tengah, maka posisinya berada di sebelah kiri dari nilai di posisi tengah
+7. Kemudian kita cari lagi posisi tengah yang baru di rentang nilai di sebelah kiri dari nilai di posisi tengah yang pertama
+8. Jika di sebelah kiri, maka kita tahu batas akhir list yang baru adalah satu nilai sebelum nilai di posisi tengah pertama dan batas awalnya adalah nilai pertama di dalam list
+9. Jika nilai yang dicari lebih besar dari nilai di posisi tengah, maka posisinya berada di sebelah kanan dari nilai di posisi tengah
+10. Kemudian kita cari lagi posisi tengah yang baru di rentang nilai di sebelah kanan dari nilai di posisi tengah yang pertama
+11. Jika di sebelah kanan, maka kita tahu batas awal list yang baru adalah satu nilai setelah nilai di posisi tengah pertama dan batas akhir adalah nilai terakhir di dalam list
+12. 
+
+Setelah itu, bagaimana kita menentukan posisi tengah yang baru berdasarkan batas awal dan akhir yang kita miliki? Dengan menjumlahkan posisi batas awal dan akhir kemudian dibagi dengan 2?
+Jika nilai yang dicari lebih kecil dari nilai tengah, nilai tersebut berada di kiri, kemudian cari nilai tengah yang baru dengan cara menjumlahkan index pertama dalam list dengan index tengah list-1 dan hasil penjumlahan dibagi 2?
+Bagaimana apabila nilai yang dicari ternyata lebih besar dari nilai tengah? Nilai tersebut berada di kanan, kemudian cari nilai tengah yang baru dengan menjumlahkan index tengah list+1 dan index terakhir dan hasil penjumlahan dibagi 2. Pertanyaannya bagaimana cara kita mengetahui berapa index terakhir itu?

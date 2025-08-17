@@ -1,0 +1,22 @@
+1. Membuat class Node: digunakan untuk membuat node baru
+2. di dalam class Node, kita menginisialisasi data (elemen yang disimpan) dan pointer (alamat ke node selanjutnya)
+3. data diinisialisasi sebagai inputan dari user dan pointer diinisialisasi awal sebagai None (dianggap masih kosong)
+4. Kemudian, membuat class LinkedList: digunakan untuk "menyimpan" node
+5. di dalam class LinkedList, kita menginisialisasi head sebagai node pertama kita dengan None (dianggap masih kosong)
+6. Kemudian, buat metode untuk menambahkan node baru di dalam LinkedList (tempat menyimpan untuk node tersebut)
+7. di dalam metode tersebut, kita harus cek dulu headnya masih kosong atau sudah terisi. Jika masih kosong, berarti elemen yang kita tambahkan akan menjadi head atau node pertama kita
+8. "Jika tidak, maka elemen tersebut akan menjadi elemen selanjutnya" node_pertama.next_node = node_kedua
+Jika bukan, maka kita harus mencari elemen terakhir dari linked list tersebut untuk disambungkan dengan yang baru
+cek dulu apakah node tersebut memiliki sambungan ke node selanjutnya atau tidak, jika ya
+Saat membuat node baru, kita perlu cek dulu headnya, apakah headnya sudah terisi atau masih kosong.
+Kalau masih kosong, berarti ke node yang baru kita tambahkan adalah node pertama dan posisinya menggantikan head.
+Kalau ternyata sudah ada isinya, kita cek dulu apakah head tersebut memiliki alamat ke node selanjutnya atau tidak, dalam arti kita cek dulu next_node dari head ini ada atau tidak. 
+Jika tidak ada, maka node yang baru kita tambahkan akan menjadi next_node dari head
+Jika ada, maka kita harus menelusuri setiap next_node dari node yang ada sampai next_node = None atau sampai ditemukan next_node dari suatu node yang kosong
+
+Metode delete_node():
+1. Membuat metode delete_node() dalam class LinkedList
+2. Digunakan untuk menghapus node tertentu sesuai dengan parameter yang dikirimkan oleh user
+3. Skenario 1:
+Kita cek dulu, apakah data yang ingin dihapus sama dengan data pada head, berarti headnya tidak kosong dan data di head = data yang ingin dihapus
+Kemudian kita 'hapus', sebenarnya ini bukan menghapus secara harfiah, tetapi kita memutuskan sambungan node tersebut ke node selanjutnya dan sebelumnya (tapi jika itu head, maka hanya diputuskan sambungan ke node selanjutnya karena head adalah node pertama, jadi tidak ada node sebelum head)
